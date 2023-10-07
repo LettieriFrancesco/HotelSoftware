@@ -1,0 +1,88 @@
+﻿@model IEnumerable<HotelSoftware.Models.Cliente>
+
+@{
+    ViewBag.Title = "ClientiRegistrati";
+}
+
+<h2>Clienti Registrati</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if (TempData["MessaggioDiConferma"] != null)
+{
+    <div style="width:300px;" class="alert alert-success">
+        @TempData["MessaggioDiConferma"]
+    </div>
+}
+@if (TempData["MessaggioDiConfermaModifica"] != null)
+{
+    <div style="width:300px;" class="alert alert-success">
+        @TempData["MessaggioDiConfermaModifica"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CodiceFiscale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cognome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Citta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Provincia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cellulare)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodiceFiscale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cognome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Citta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Provincia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cellulare)
+            </td>
+            <td>
+                @Html.ActionLink("Modifica", "Edit", new { id = item.Id }) |
+                @*@Html.ActionLink("Details", "Details", new { id = item.Id }) |*@
+                @Html.ActionLink("Elimina", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pagina Admin</h2>
+<div class="container-fluid">
+    <div class="row">
+        <h3 class="text-center text-danger mb-5">Pannello Amministratori</h3>
+        <hr />
+        <div class="col-3 d-flex">
+            <a class="text-decoration-none" href="/Admin/ClientiRegistrati">
+                @*//da cambiare le rotte*@
+                <p class="text-center text-danger">Anagrafica Clienti</p>
+            </a>
+        </div>
+        <div class="col-3 d-flex">
+            <a class="text-decoration-none" href="/Admin/Create">
+                @*//da cambiare le rotte*@
+                <p class="text-center text-danger text-decoration-none">Registra nuovo cliente</p>
+            </a>
+        </div>
+        <div class="col-3 d-flex">
+            <a class="text-decoration-none" href="/Admin/PrenotazioniRegistrate">
+                <p class="text-center text-danger text-decoration-none">Prenotazioni Registrate</p>
+            </a>
+        </div>
+        <div class="col-3 d-flex">
+            <a class="text-decoration-none" href="/Admin/CreatePrenotazione/">
+                <p class="text-center text-danger text-decoration-none">Registra Prenotazione</p>
+            </a>
+        </div>
+    </div>
+    @*<div class="row">
+        <div class="col-12 d-flex justify-content-center mt-2">
+            <a class="text-decoration-none" href="/Spedizioni/AggiornamentoSped">
+                <p class="text-center text-danger text-decoration-none">Stato Spedizioni</p>
+            </a>
+        </div>
+    </div>*@
+</div>
